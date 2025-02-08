@@ -1,7 +1,51 @@
 #include "Game.h"
 
+using namespace Game;
+
+//Private namespace
+namespace {
+	void renderFrame () {
+		processInput(window);
+
+		glfwSwapBuffers(window); //updates screen buffer
+		glfwPollEvents(); //Check for inputs
+	}
+
+	void windowResizeCallback(GLFWwindow* window, int width, int height) { //for when the window gets resized
+		glViewport(0, 0, width, height);
+	}
+
+	//Input Handeling
+	bool keysDown[GLFW_KEY_LAST-GLFW_KEY_SPACE];
+	vector<function<void()>> functionCalls[GLFW_KEY_LAST-GLFW_KEY_SPACE];
+	void processInput(GLFWwindow* window) {
+		//esc key closes app (temporary)
+		if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) glfwSetWindowShouldClose(window, true);
+
+
+		//Adding/removing keys to keysDown | If new key is added, call callback functions
+		for (int i = GLFW_KEY_SPACE; i < GLFW_KEY_LAST; i++) {
+			bool isDown = keyDown(i);
+			if (isDown) {
+				bool previous = keysDown[i-33]; //
+				if (!previous) {
+					vector<function<void()>> funcs = functionCalls[i-33];
+					for (const function<void()> func : funcs) {
+						func();
+					}
+				}
+				keysDown[i-33] = true;
+			} else {
+				keysDown[i-33] = false;
+			}
+		}
+	}
+}
+
+//Exported Game namespace
 namespace Game {
 	GLFWwindow* window = nullptr;
+
 	int createWindow(int w, int h) {
 		//Initialize
 		glfwInit();
@@ -32,16 +76,19 @@ namespace Game {
 		glfwSetFramebufferSizeCallback(window,windowResizeCallback); //assigns callback function
 
 
-		//render loop
+		//Render loop
 		while(!glfwWindowShouldClose(window)) {
-			glfwSwapBuffers(window); //reboots screen buffer
-			glfwPollEvents(); //Check for inputs
+			renderFrame();
 		}
-
 		glfwTerminate();
+
 		return 0;
 	}
-	void windowResizeCallback(GLFWwindow* window, int width, int height) { //for when the window gets resized
-		glViewport(0, 0, width, height);
-	};
+
+	bool keyDown (int key) {
+		return glfwGetKey(window, key) == GLFW_PRESS;
+	}
+	void addCallbackToKeyDown(int key, const function<void()>& func) {
+		functionCalls[key-33].push_back(func);
+	}
 }
