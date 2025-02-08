@@ -12,7 +12,7 @@ file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp" "${SRC_DIR}/*.c")
 add_executable(out ${SOURCES})
 
 
-include_directories("D:/Libraries/GLAD/include")
-include_directories("D:/Libraries/GLFW/include")
+include_directories(${GLAD_INCLUDE})
+include_directories(${GLFW_INCLUDE})
 
-target_link_libraries(out "D:/Libraries/GLFW/lib-mingw-w64/libglfw3.a")
+target_link_libraries(out ${GLFW__STATIC_LIB_MINGW-W64})
