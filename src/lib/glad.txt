@@ -1,0 +1,1 @@
+Download the glad library, add glad.c here, and add the include to the include function in cmake
