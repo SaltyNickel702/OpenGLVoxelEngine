@@ -1,3 +1,0 @@
-D:/Coding/CPP/Graphics/VoxelGame/build/CMakeFiles/out.dir
-D:/Coding/CPP/Graphics/VoxelGame/build/CMakeFiles/edit_cache.dir
-D:/Coding/CPP/Graphics/VoxelGame/build/CMakeFiles/rebuild_cache.dir
