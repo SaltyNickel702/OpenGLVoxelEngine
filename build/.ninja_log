@@ -1,0 +1,18 @@
+# ninja log v6
+21	200	7607427214799339	CMakeFiles/out.dir/src/main.cpp.obj.ddi	85ef6c5d40c9a604
+234	934	7607427216936314	CMakeFiles/out.dir/src/main.cpp.obj	27a849a83092b4d9
+14	193	7607504453576442	CMakeFiles/out.dir/src/Game.cpp.obj.ddi	992eb16194c7ae59
+193	216	7607504455368724	D:/Coding/CPP/Graphics/VoxelGame/build/CMakeFiles/out.dir/CXXModules.json	5ce3baf100126c5a
+193	216	7607504455368724	CMakeFiles/out.dir/CXX.dd	5ce3baf100126c5a
+193	216	7607504455368724	CMakeFiles/out.dir/src/Game.cpp.obj.modmap	5ce3baf100126c5a
+193	216	7607504455368724	CMakeFiles/out.dir/src/main.cpp.obj.modmap	5ce3baf100126c5a
+14	625	7607332713060776	CMakeFiles/out.dir/src/lib/glad.c.obj	6de4e45f7798f8aa
+217	935	7607504455614032	CMakeFiles/out.dir/src/Game.cpp.obj	bcd79f4263bbf492
+935	1065	7607504462794337	out.exe	aaea8d65472ad9f8
+14	186	7607504620194719	CMakeFiles/out.dir/src/Game.cpp.obj.ddi	992eb16194c7ae59
+186	212	7607504621907203	CMakeFiles/out.dir/CXX.dd	5ce3baf100126c5a
+186	212	7607504621907203	D:/Coding/CPP/Graphics/VoxelGame/build/CMakeFiles/out.dir/CXXModules.json	5ce3baf100126c5a
+186	212	7607504621907203	CMakeFiles/out.dir/src/Game.cpp.obj.modmap	5ce3baf100126c5a
+186	212	7607504621907203	CMakeFiles/out.dir/src/main.cpp.obj.modmap	5ce3baf100126c5a
+213	929	7607504622177719	CMakeFiles/out.dir/src/Game.cpp.obj	bcd79f4263bbf492
+929	1058	7607504629336179	out.exe	aaea8d65472ad9f8

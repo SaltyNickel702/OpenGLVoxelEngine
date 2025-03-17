@@ -13,9 +13,9 @@ using namespace std;
 
 namespace Game {
 	extern GLFWwindow* window;
-	int createWindow(int w, int h);
-	bool keyDown(int GLFWkey); //Is key Held Down
-	void addCallbackToKeyDown(int GLFWkey, const function<void()>& func); //Triggers passed in function when key is pressed
+	int init(int w, int h);
+	bool keyDown(int GLFWkey); //Is key held down
+	void addCallbackToKeyDown(int GLFWkey, const function<void()>& func); //Calls passed in function when key is pressed
 }
 
 #endif

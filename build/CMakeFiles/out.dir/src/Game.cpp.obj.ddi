@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\out.dir\\src\\Game.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}
